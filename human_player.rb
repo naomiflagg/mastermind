@@ -1,13 +1,11 @@
 class HumanPlayer
-  attr_accessor :role
 
   def initialize(game)
     @game = game
   end
 
   def input_role
-    puts "Which role would you like? Type 'codemaker'" \
-    "or 'codebreaker'."
+    puts "Which role would you like? Type 'codemaker' or 'codebreaker'."
     loop do
       role = gets.chomp
       return role if %w[codemaker codebreaker].include?(role)
@@ -30,7 +28,7 @@ class HumanPlayer
     end
   end
 
-  def input_feedback(_ask)
+  def input_feedback
     puts "Your code: #{@game.code}"
     loop do
       feedback = gets.chomp.split(' ')

@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Game
-  require 'pry'
   require_relative('human_player.rb')
   require_relative('computer_player.rb')
   require_relative('board.rb')
